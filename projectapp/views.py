@@ -34,8 +34,9 @@ class BlogUpdateView(UpdateView):
 
 class BlogDeletView(DeleteView):
     """Delet qiladi """
-
-
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = reverse_lazy('home.html')
 
 
 
