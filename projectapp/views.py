@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import Post
 # Create your views here.
 
@@ -16,10 +17,18 @@ class BlogDetailView(DeleteView):
     template_name = 'post_detail.html'
 
 
+class BlogCreateView(CreateView):
+    """yaratadi  """
+    model = Post
+    template_name = 'post_new.html'
+    fields = ['title', 'author', 'body']
 
 
-
-
+class BlogUpdateView(UpdateView):
+    """yangilaydi """
+    model = Post
+    template_name = 'post_edit.html'
+    fields = ['title', 'body']
 
 
 
