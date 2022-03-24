@@ -25,7 +25,7 @@ class BlogCreateView(CreateView):
 
 
 class BlogUpdateView(UpdateView):
-    """yangilaydi """
+    """Update template """
     model = Post
     template_name = 'post_edit.html'
     fields = ['title', 'body']
