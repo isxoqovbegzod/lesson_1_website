@@ -11,9 +11,16 @@
     <header>
         <h1><a href="{% url 'home.html' %}">Home</a></h1>
     </header>
+
+    {% if user.is_authenticated %}
+        <p>Xush kelibsiz, {{ user.username }}</p>
+        <p><a href="{% url 'logout' %}">Logaut</a></p>
+    {% else %}
+        <a href="{% url 'login' %}">login</a>
+    {% endif %}
+
     <div class="container">
         {% block content %}
-
         {% endblock content %}
     </div>
 
