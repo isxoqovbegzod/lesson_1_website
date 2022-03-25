@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-<header>
-    <h1><a href="{% url 'home.html' %}">Home</a></h1>
-</header>
-<div class="container">
-    {% block content %}
+<div class="content">
+    <header>
+        <h1><a href="{% url 'home.html' %}">Home</a></h1>
+    </header>
+    <div class="container">
+        {% block content %}
 
-    {% endblock content %}
+        {% endblock content %}
+    </div>
+
+    <footer>
+        <h2><a href="{% url 'post_new.html' %}">Yangi POST YOZISH </a></h2>
+    </footer>
 </div>
-
-<footer>
-    <h2><a href="{% url 'post_new.html' %}">Yangi POST YOZISH </a></h2>
-</footer>
 </body>
 </html>

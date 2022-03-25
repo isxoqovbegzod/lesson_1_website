@@ -2,11 +2,14 @@
 {% block content %}
 
     <div class="post-entry">
-        <h2>{{ post.title }}</h2>
-        <h3>{{ post.author }}</h3>
-        <p>{{ post.body }}</p>
+        <h5>qo'shgan user nomi {{ post.author }}</h5>
+        <h2>title = {{ post.title }}</h2>
+        <p>text = {{ post.body }}</p>
     </div>
-<a href="{% url 'post_edit.html' post.pk %}" >Tahrirlash </a>
+    <ul>
+        <ls><a href="{% url 'post_edit.html' post.pk %}" >Tahrirlash </a></ls><br>
+        <ls><a href="{% url 'post_delete.html' post.pk %}" >O'chirisha</a></ls>
+    </ul>
 {% endblock content %}
 
 
